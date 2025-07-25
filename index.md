@@ -5,6 +5,8 @@ subtitle: Future PhD Student at iDEMoov
 use-site-title: true
 ---
 
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
 As of the time of writing, I am completing my master's degree in Mechatronics at the <a href="https://www.cs.jhu.edu/">University of Strasbourg</a>, with a strong focus on embedded Artificial Intelligence, more specifically, Edge AI.
 
 During my internship in Edge AI at <a href="https://www.idemoov.fr/">iDEMoov</a>, my passion for this fascinating field has only grown, particularly as optimization is one of my key strengths.
