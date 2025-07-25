@@ -20,11 +20,10 @@ author: Thomas Vetter
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  #Resources:
-  #  - Beautiful Jekyll: "https://beautifuljekyll.com"
-  #  - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  About Me: "index"
+  Projects : "projects"
+  Vroom : "vroom"
+  Resume: "resume"
 
 ################
 # --- Logo --- #
@@ -57,7 +56,7 @@ social-network-links:
 #  twitter: daattali
 #  patreon: DeanAttali
 #  youtube: "@daattali"
-   whatsapp: +491777703478
+#  whatsapp: +491777703478
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
    linkedin: thomas-vetter-283593217/
