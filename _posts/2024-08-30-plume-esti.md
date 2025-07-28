@@ -81,12 +81,12 @@ All steps—from puff generation to EKF recursion—live in a single MATLAB Live
 
 The 3D plume evolution is visualized with successive slice plots (Fig. 2). The EKF‑estimated horizontal spread $$\sigma_h$$ tracks the true value closely (Fig. 3), with RMSE < 5 %. Estimated concentration curves align with noisy sensor data, cutting bias while keeping each EKF step under 1 ms. The Live Script processes hundreds of puffs and updates in just a few seconds.
 
-<figure style="max-width:800px; margin:0 auto; text-align:center;">
+<figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
   <img src="../assets/img/puffs_visualization.png" width="500" alt="Gaussian Puffs evolution">
   <figcaption><em>Figure 2.</em> Puff evolution over time.</figcaption>
 </figure>  
 
-<figure style="max-width:800px; margin:0 auto; text-align:center;">
+<figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
   <img src="../assets/img/estimation_std.png" width="500" alt="Spread estimation">
   <figcaption><em>Figure 3.</em> Horizontal spread estimation for one puff.</figcaption>
 </figure>
