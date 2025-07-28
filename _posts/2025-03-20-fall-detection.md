@@ -5,15 +5,6 @@ date: 2025-03-20
 subtitle: "AI based fall detection on constrained environment"
 ---
 
-<head>
-  <style>
-    /* Apply full justification to all paragraphs */
-    p {
-      text-align: justify;
-    }
-  </style>
-</head>
-
 <h2>Summary</h2>
 <p>
   This internship demonstrated the feasibility of fully on‑device fall detection on the STM32L4‑based iDETime badge, combining a tailor‑made signal‑processing pipeline, lightweight feature extraction, and real‑time inference of a TinyML model under a strict 320 KB RAM budget.

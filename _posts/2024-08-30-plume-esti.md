@@ -76,7 +76,7 @@ K_{k+1} = P_{k+1\mid k}\,G_{k+1}^T\,(G_{k+1}\,P_{k+1\mid k}\,G_{k+1}^T + R)^{-1}
 \hat{\mathbf{x}}_{k+1\mid k+1} = \hat{\mathbf{x}}_{k+1\mid k} + K_{k+1}\bigl(\mathbf{y}_{k+1} - g(\hat{\mathbf{x}}_{k+1\mid k})\bigr)
 $$
 
-where $$F_k$$ and $$G_{k+1}$$ are the Jacobians of $f$ and $g$, and $Q,R$ the noise covariances.
+where $$F_k$$ and $$G_{k+1}$$ are the Jacobians of $$f$$ and $$g$$, and $$Q,R$$ the noise covariances.
 
 ## Implementation
 
@@ -98,4 +98,4 @@ The 3D plume evolution is visualized with successive slice plots (Fig. 2). The 
 
 ## What’s Next?
 
-Future steps include fusing data from multiple sensors to improve observability, extending the puff model with buoyancy and chemical reactions, conducting field trials to calibrate dispersion coefficients, and porting core routines to C/C++ for on‑site real‑time monitoring.
+This work will be analyzed and further upgrades by a good friend and fellow PhD student, <a href="https://fr.linkedin.com/in/maya-pivert/en">Maya Pivert</a>. Future work will integrate multiple spatially distributed sensors to improve observability and minimize estimation uncertainty. The Gaussian‑puff model will be extended to incorporate buoyancy effects, atmospheric stratification, and basic chemical reactions for reactive plumes in order to become even more realistic. Controlled field experiments are planned to calibrate dispersion coefficients and validate the EKF in real atmospheric conditions. Finally, critical routines will be ported to C/C++ for deployment on embedded hardware, enabling on‑site, real‑time plume monitoring.
