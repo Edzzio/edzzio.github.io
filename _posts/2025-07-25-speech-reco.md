@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tiny Speech Commands Recognition"
-date: 2025-08-10
+date: 2025-07-25
 subtitle: "Speech Commands Recognition on constrained microcontroler"
 ---
 
