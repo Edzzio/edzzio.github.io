@@ -24,14 +24,14 @@ A two‑stage approach was implemented *(Fig. 2 for global method)*:
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
   <img src="../assets/img/global_ano_detect_method.png" width="350" alt="Method workflow diagram">
   <figcaption><em>Figure 2.</em> Global method visualization.</figcaption>
-</figure> <br>
+</figure>  
 
 1. **Convolutional Autoencoder (CAE‑MSSIM) :** A symmetric encoder–decoder network compresses each input patch and reconstructs it, with the loss function combining mean squared error and multi‑scale SSIM (similarity index) to preserve fine textures. The reconstruction is focused on the area of interest (the screw in this case). After training on defect‑free samples, reconstruction residuals accentuate anomalies with an anomaly map (Fig. 3, you notice that the anomaly is not reconstructed at all, and thus we will get a much higher reconstruction error in that zone).
 
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
   <img src="../assets/img/ano_detect_method.png" width="500" alt="Method workflow diagram">
   <figcaption><em>Figure 3.</em> Visualization of the reconstruction method.</figcaption>
-</figure><br>
+</figure>  
 
 2. **Segmentation‑guided anomaly mapping** augments the autoencoder with a lightweight segmentation head that produces per‑patch error scores strictly over the object region. We first select the top 10 % of patches with the highest reconstruction error (Fig. 4). For each candidate patch, we then compute the difference between its error and the errors of its immediate neighbors (Fig. 5). A patch is marked as anomalous whenever this error deviation exceeds $$\pm 3\sigma$$, where $$\sigma$$ is the standard deviation of the reconstruction error measured on the defect‑free training set.
 
@@ -39,7 +39,7 @@ A two‑stage approach was implemented *(Fig. 2 for global method)*:
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
   <img src="../assets/img/area_of_interest_ano.png" width="500" alt="Method workflow diagram">
   <figcaption><em>Figure 4.</em> 10 % of errors in area of interest.</figcaption>
-</figure> <br>
+</figure>  
 
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
   <img src="../assets/img/patched_ano_score.png" width="500" alt="Method workflow diagram">

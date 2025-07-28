@@ -57,16 +57,14 @@ $$
 
 The EKF alternates between:
 
-**Predict** 
-
+**Predict**   
 $$
 \hat{\mathbf{x}}_{k+1\mid k} = f(\hat{\mathbf{x}}_{k\mid k}), 
 \quad
 P_{k+1\mid k} = F_k\,P_{k\mid k}\,F_k^T + Q
 $$
 
-**Update** 
-
+**Update**  
 $$
 K_{k+1} = P_{k+1\mid k}\,G_{k+1}^T\,(G_{k+1}\,P_{k+1\mid k}\,G_{k+1}^T + R)^{-1},
 \quad
@@ -86,7 +84,7 @@ The 3D plume evolution is visualized with successive slice plots (Fig. 2). The 
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
   <img src="../assets/img/puffs_visualization.png" width="500" alt="Gaussian Puffs evolution">
   <figcaption><em>Figure 2.</em> Puff evolution over time.</figcaption>
-</figure>
+</figure>  
 
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
   <img src="../assets/img/estimation_std.png" width="500" alt="Spread estimation">

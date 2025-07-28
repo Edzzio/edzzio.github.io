@@ -38,7 +38,7 @@ To overcome these, we later adopted the Nav2 stack—using SLAM‑generated maps
 Prototype 1 filtered a 60° LiDAR sector on the Pi, sent distances over serial to the OpenCR, and halted the robot before obstacles. 
 
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
-  <img src="../assets/img/Proto1.png" width="200" alt="First prototype">
+  <img src="../assets/img/proto1.png" width="200" alt="First prototype">
   <figcaption><em>Figure 3.</em> First prototype visualization.</figcaption>
 </figure>
 
