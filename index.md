@@ -15,7 +15,10 @@ To pursue my goal of becoming a researcher in this domain, I will soon begin a P
 
 When I'm not optimizing AIs, I enjoy racquet sports, especially table tennis, as well as video games, cinema, water sports like canoeing and kayaking, and rigorously cleaning everything.
 
-This website showcases a selection of my academic projects, completed during both my studies and internships.
+<figure style="max-width:800px; margin:0 auto; text-align:center;">
+  <img src="assets/img/kayaKING.jpg" width="500" alt="Method workflow diagram">
+  <figcaption><em>Figure 1.</em> The king of the rivers</figcaption>
+</figure>
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
