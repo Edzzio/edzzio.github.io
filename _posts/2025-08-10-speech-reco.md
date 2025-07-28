@@ -1,6 +1,8 @@
 ---
 layout: post
-title: Smoke plume modeling and estimation 
+title: "Tiny Speech Commands Recognition"
+date: 2025‑08-10
+subtitle: "Speech Commands Recognition on constrained microcontroler"
 ---
 
 <head>

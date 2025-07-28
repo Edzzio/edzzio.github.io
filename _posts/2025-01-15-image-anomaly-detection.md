@@ -1,6 +1,8 @@
 ---
 layout: post
-title: Intelligent Turtlebot3 Navigation
+title: "Subtle Anomaly Detection"
+date: 2025‑01-15
+subtitle: "Subtle Image based Anomaly Detection using an Autoencoder with a Segmentation model"
 ---
 
 <head>
