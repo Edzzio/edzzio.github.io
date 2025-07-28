@@ -36,12 +36,12 @@ A two‑stage approach was implemented *(Fig. 2 for global method)*:
 2. **Segmentation‑guided anomaly mapping** augments the autoencoder with a lightweight segmentation head that produces per‑patch error scores strictly over the object region. We first select the top 10 % of patches with the highest reconstruction error (Fig. 4). For each candidate patch, we then compute the difference between its error and the errors of its immediate neighbors (Fig. 5). A patch is marked as anomalous whenever this error deviation exceeds $$\pm 3\sigma$$, where $$\sigma$$ is the standard deviation of the reconstruction error measured on the defect‑free training set.
 
 
-<figure style="max-width:800px; margin:0 auto; text-align:center;">
+<figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
   <img src="../assets/img/area_of_interest_ano.png" width="500" alt="Method workflow diagram">
   <figcaption><em>Figure 4.</em> 10 % of errors in area of interest.</figcaption>
-</figure>  
+</figure>
 
-<figure style="max-width:800px; margin:0 auto; text-align:center;">
+<figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
   <img src="../assets/img/patched_ano_score.png" width="500" alt="Method workflow diagram">
   <figcaption><em>Figure 5.</em> Error variation with neighoring patches.</figcaption>
 </figure>
@@ -51,7 +51,7 @@ A two‑stage approach was implemented *(Fig. 2 for global method)*:
 
 The CAE‑MSSIM model achieved high‑fidelity reconstructions on pristine images while consistently under‑reconstructing defect regions. Anomaly maps derived from the residuals correctly highlighted hairline scratches and surface pitting, which standard edge detectors missed. Applying a dynamic threshold to the anomaly maps further reduced false positives in textured areas, boosting detection precision without sacrificing recall. Overall, the approach delivered slighty under 90 % detection accuracy (Fig. 6) on held‑out validation patches, with inference times suitable for near‑real‑time inspection (0.6 seconds per inference).
 
-<figure style="max-width:800px; margin:0 auto; text-align:center;">
+<figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
   <img src="../assets/img/conf_mat_ano_img.png" width="300" alt="Method workflow diagram">
   <figcaption><em>Figure 6.</em> Confusion matrix (88 % accuracy).</figcaption>
 </figure>
