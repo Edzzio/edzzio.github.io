@@ -37,7 +37,7 @@ C_i(x,y,z,t)
 \exp\!\Bigl(-\tfrac12\frac{(z - z_{c,i}(t))^2 + (z + z_{c,i}(t))^2}{\sigma_v^2}\Bigr)
 $$  
 
-where $(x,y,z)$ are the evaluation point, $(x_{c,i},y_{c,i},z_{c,i})$ is the puff center, $\sigma_h,\sigma_v$ are the time‑varying spreads, and $Q_{p,i}$ is the puff’s mass. Summing over all $N$ puffs gives the full plume:
+where $$(x,y,z)$$ are the evaluation point, $$(x_{c,i},y_{c,i},z_{c,i})$$ is the puff center, $$\sigma_h,\sigma_v$$ are the time‑varying spreads, and $$Q_{p,i}$$ is the puff’s mass. Summing over all $$N$$ puffs gives the full plume:
 
 $$
 C(x,y,z,t) = \sum_{i=1}^N C_i(x,y,z,t)\,.
@@ -76,7 +76,7 @@ K_{k+1} = P_{k+1\mid k}\,G_{k+1}^T\,(G_{k+1}\,P_{k+1\mid k}\,G_{k+1}^T + R)^{-1}
 \hat{\mathbf{x}}_{k+1\mid k+1} = \hat{\mathbf{x}}_{k+1\mid k} + K_{k+1}\bigl(\mathbf{y}_{k+1} - g(\hat{\mathbf{x}}_{k+1\mid k})\bigr)
 $$
 
-where $$\mathbf{F_k}$$ and $$\mathbf{G_{k+1}}$$ are the Jacobians of $f$ and $g$, and $Q,R$ the noise covariances.
+where $$F_k$$ and $$G_{k+1}$$ are the Jacobians of $f$ and $g$, and $Q,R$ the noise covariances.
 
 ## Implementation
 
