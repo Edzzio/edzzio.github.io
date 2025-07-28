@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fall Detection on the Edge"
-date: 2025‑03‑20
+date: 2025-03-20
 subtitle: "AI based fall detection on constrained environment"
 ---
 
