@@ -6,8 +6,6 @@ subtitle: "Smoke plume modelling and estimation"
 mathjax: true
 ---
 
-## Summary
-
 I presented a complete pipeline for modeling and estimating the behavior of a three‑dimensional smoke plume released into the atmosphere. The plume is represented as a sequence of Gaussian “puffs,” each carrying a fixed mass and spreading according to atmospheric dispersion coefficients. An Extended Kalman Filter (EKF) then fuses sparse concentration measurements to recover each puff’s center position and spread parameters in real time. The entire workflow is implemented in a MATLAB Live Script, enabling interactive visualization of both simulation and estimation results!
 
 ## Objectives
@@ -38,7 +36,6 @@ C_i(x,y,z,t)
 $$  
 
 where $$(x,y,z)$$ are the evaluation point, $$(x_{c,i},y_{c,i},z_{c,i})$$ is the puff center, $$\sigma_h,\sigma_v$$ are the time‑varying spreads, and $$Q_{p,i}$$ is the puff’s mass. Summing over all $$N$$ puffs gives the full plume:
-
 $$
 C(x,y,z,t) = \sum_{i=1}^N C_i(x,y,z,t)\,.
 $$

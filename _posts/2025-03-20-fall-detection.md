@@ -5,16 +5,13 @@ date: 2025-03-20
 subtitle: "AI based fall detection on constrained environment"
 ---
 
-<h2>Summary</h2>
 <p>
   This internship demonstrated the feasibility of fully on‑device fall detection on the STM32L4‑based iDETime badge, combining a tailor‑made signal‑processing pipeline, lightweight feature extraction, and real‑time inference of a TinyML model under a strict 320 KB RAM budget.
 </p>
 
 <h2>Objectives</h2>
 <p>
-  The work began with a clear set of goals: benchmark and compare different AI code‑generation frameworks for embedded deployment; design an efficient sliding‑window and interpolation pipeline to extract robust time‑ and frequency‑domain features. 
-  
-  Apply a multiobjective optimization strategy to balance predictive accuracy, memory footprint, and inference latency; and finally generate C libraries for seamless integration and profiling on the badge.
+  The work began with a clear set of goals: Benchmark and compare different AI code‑generation frameworks for embedded deployment; design an efficient sliding‑window and interpolation pipeline to extract robust time‑domain features; apply a multiobjective optimization strategy to balance predictive accuracy, memory footprint, and inference latency; and finally generate C libraries for seamless integration and profiling on the device in real-time (FreeRTOS).
 </p>
 
 <h2>Method</h2>
@@ -28,8 +25,6 @@ subtitle: "AI based fall detection on constrained environment"
 <h2>AI Model</h2>
 <p>
   Among several models, a Random Forest emerged as the best compromise. In its optimized form (five trees of maximum depth 25), it achieved 96.7 % balanced accuracy with an ONNX file of only 5 KB (versus 129 KB by default), while maintaining sub‑100 MACC complexity per inference.
-
-</figure>
 </p>
 
 <h2>Implementation</h2>
