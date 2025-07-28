@@ -3,6 +3,7 @@ layout: post
 title: "3D Smoke Plume Estimation"
 date: 2024-08-30
 subtitle: "Smoke plume modelling and estimation"
+mathjax: true
 ---
 
 ## Summary
