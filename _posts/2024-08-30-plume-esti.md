@@ -45,17 +45,19 @@ $$
 
 ## Estimation Method: Extended Kalman Filter
 
-Each puff’s state vector  
+Each puff’s state vector 
+
 $$
 \mathbf{x}_k = [\,x_c,\,y_c,\,z_c,\,\sigma_h,\,\sigma_v\,]^T
 $$  
-<br>
+
 evolves via  
-<br>
+
 $$
 \mathbf{x}_{k+1} = f(\mathbf{x}_k) + \mathbf{w}_k,\quad
 \mathbf{y}_k = g(\mathbf{x}_k) + \mathbf{v}_k\,.
 $$  
+
 The EKF alternates between:
 
 **Predict** 
@@ -74,7 +76,7 @@ K_{k+1} = P_{k+1\mid k}\,G_{k+1}^T\,(G_{k+1}\,P_{k+1\mid k}\,G_{k+1}^T + R)^{-1}
 \hat{\mathbf{x}}_{k+1\mid k+1} = \hat{\mathbf{x}}_{k+1\mid k} + K_{k+1}\bigl(\mathbf{y}_{k+1} - g(\hat{\mathbf{x}}_{k+1\mid k})\bigr)
 $$
 
-where $\mathbf{F_k}$ and $\mathbf{G_{k+1}}$ are the Jacobians of $f$ and $g$, and $Q,R$ the noise covariances.
+where $$\mathbf{F_k}$$ and $$\mathbf{G_{k+1}}$$ are the Jacobians of $f$ and $g$, and $Q,R$ the noise covariances.
 
 ## Implementation
 
