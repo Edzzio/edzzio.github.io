@@ -21,14 +21,14 @@ The main goals were to master deep‑learning frameworks (PyTorch, TensorFlow) f
 
 A two‑stage approach was implemented *(Fig. 2 for global method)*:
 
-<figure style="max-width:800px; margin:0 auto; text-align:center;">
+<figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
   <img src="../assets/img/global_ano_detect_method.png" width="350" alt="Method workflow diagram">
   <figcaption><em>Figure 2.</em> Global method visualization.</figcaption>
 </figure>  
 
 1. **Convolutional Autoencoder (CAE‑MSSIM) :** A symmetric encoder–decoder network compresses each input patch and reconstructs it, with the loss function combining mean squared error and multi‑scale SSIM (similarity index) to preserve fine textures. The reconstruction is focused on the area of interest (the screw in this case). After training on defect‑free samples, reconstruction residuals accentuate anomalies with an anomaly map (Fig. 3, you notice that the anomaly is not reconstructed at all, and thus we will get a much higher reconstruction error in that zone).
 
-<figure style="max-width:800px; margin:0 auto; text-align:center;">
+<figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
   <img src="../assets/img/ano_detect_method.png" width="500" alt="Method workflow diagram">
   <figcaption><em>Figure 3.</em> Visualization of the reconstruction method.</figcaption>
 </figure>  
