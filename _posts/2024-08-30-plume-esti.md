@@ -41,12 +41,17 @@ subtitle: "Smoke plume modelling and estimation"
 
   A solution would be to discretize the plume into individual puffs emitted at fixed intervals. Each puff’s concentration field is modeled by
 
-  <figure style="max-width:800px; margin:0 auto; text-align:center;">
-  <img src="../assets/img/gaussian_puffs_eq.png" width="400" alt="Gaussian Puffs equation">
-  <figcaption><em>Figure 2.</em> 3D Gaussian Puffs equation.</figcaption>
-  </figure>
+  <div align="center">
 
-  <br>
+  $$
+  C_i(x,y,z,t)
+  = \frac{Q_{p,i}}{(2\pi)^{3/2}\,\sigma_h^2\,\sigma_v}
+  \exp\!\biggl(-\frac{1}{2}\frac{(x - x_{c,i}(t))^2 + (y - y_{c,i}(t))^2}{\sigma_h^2}\biggr)
+  \;\times\;
+  \exp\!\biggl(-\frac{1}{2}\frac{(z - z_{c,i}(t))^2 + (z + z_{c,i}(t))^2}{\sigma_v^2}\biggr)
+  $$
+
+  </div>
 
   where $\ x,\ y,\ z$ are the coordinates of calculated position, $\sigma_h$ and $\sigma_v$ are the time‑varying horizontal and vertical standard deviations computed from empirical dispersion formulas, and $Q_i$ is the puff’s mass. We would have to compute $\ i$ puffs in total in order to get a more accurate depiction of the smoke plume
   
@@ -59,14 +64,26 @@ subtitle: "Smoke plume modelling and estimation"
 
   Each puff’s state vector $\ x = [x_c, y_c, z_c, σₕ, σᵥ]^T$ evolves according to discrete‑time dynamics that update its position by advection and its spread by diffusion. Measurements $\ y_k$ are concentration samples at fixed sensor locations, related by the nonlinear function g(xₖ). The EKF alternates between a prediction and a update phase :
 
-  **Predict:** $\ x̂ₖ₊₁|ₖ = f(x̂ₖ|ₖ)$ and $\ Pₖ₊₁|ₖ = Fₖ Pₖ|ₖ Fₖᵀ + Q$
+  <div align="center">
 
-  **Update:** $\ Kₖ₊₁ = Pₖ₊₁|ₖ Gₖ₊₁ᵀ (Gₖ₊₁ Pₖ₊₁|ₖ Gₖ₊₁ᵀ + R)⁻¹$ 
-  <br> and $\ x̂ₖ₊₁|ₖ₊₁ = x̂ₖ₊₁|ₖ + Kₖ₊₁ (yₖ₊₁ – g(x̂ₖ₊₁|ₖ))$
+  **Predict**  
+  $$
+  \hat x_{k+1\mid k} = f(\hat x_{k\mid k}), 
+  \qquad
+  P_{k+1\mid k} = F_{k}\,P_{k\mid k}\,F_{k}^T + Q
+  $$
+
+  **Update**  
+  $$
+  K_{k+1} = P_{k+1\mid k}\,G_{k+1}^T\,(G_{k+1}\,P_{k+1\mid k}\,G_{k+1}^T + R)^{-1},
+  \quad
+  \hat x_{k+1\mid k+1} = \hat x_{k+1\mid k} + K_{k+1}\bigl(y_{k+1} - g(\hat x_{k+1\mid k})\bigr)
+  $$
+
+  </div>
 
   where $\ Fₖ$ and $\ Gₖ $ are the Jacobians of $\ f$ and $\ g$, and Q/R are the process/measurement noise covariances.
 
-</figure>
 </p>
 
 <h2>Implementation</h2>
@@ -76,21 +93,19 @@ subtitle: "Smoke plume modelling and estimation"
 
 <h2>Results</h2>
 <p>
-  The 3D plume evolution is clearly visible through successive slice plots (Fig. 3), illustrating how puffs spread and advect under the prescribed wind field. The EKF‑estimated horizontal spread $\sigma_h$ closely tracks the true value, yielding a root‑mean‑square error below 5 %. Filtered concentration curves align with noisy sensor measurements, reducing estimation bias while maintaining real‑time performance (EKF update executes in under 1 ms per step). The MATLAB Live Script completes hundreds of puff simulations and corresponding EKF updates within seconds.
+  The 3D plume evolution is clearly visible through successive slice plots (Fig. 2), illustrating how puffs spread and advect under the prescribed wind field. The EKF‑estimated horizontal spread $\sigma_h$ closely tracks the true value (Fig .3), yielding a root‑mean‑square error below 5 %. Filtered concentration curves align with noisy sensor measurements, reducing estimation bias while maintaining real‑time performance (EKF update executes in under 1 ms per step). The MATLAB Live Script completes hundreds of puff simulations and corresponding EKF updates within seconds.
 
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
   <img src="../assets/img/puffs_visualization.png" width="500" alt="AI results">
-  <figcaption><em>Figure 3.</em> Gaussian Puffs evolution over time.</figcaption>
+  <figcaption><em>Figure 2.</em> Gaussian Puffs evolution over time.</figcaption>
 </figure>
 </p>
 
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
   <img src="../assets/img/estimation_std.png" width="500" alt="AI results">
-  <figcaption><em>Figure 4.</em> Horizontal standard deviation estimation (one puff)'.</figcaption>
+  <figcaption><em>Figure 3.</em> Horizontal standard deviation estimation (one puff)'.</figcaption>
 </figure>
 </p>
-
-https://fr.linkedin.com/in/maya-pivert/en
 
 <h2>What’s Next?</h2>
 <p>
