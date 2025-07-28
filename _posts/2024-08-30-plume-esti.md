@@ -29,7 +29,6 @@ The problem with modeling the smoke plume as a single steady‑state entity (Gau
 
 A more dynamic solution is to discretize the plume into individual puffs emitted at fixed intervals. Each puff’s concentration field is  
 
-<div align="center">  
 $$
 C_i(x,y,z,t)
 = \frac{Q_{p,i}}{(2\pi)^{3/2}\,\sigma_h^2\,\sigma_v}
@@ -37,7 +36,6 @@ C_i(x,y,z,t)
 \;\times\;
 \exp\!\Bigl(-\tfrac12\frac{(z - z_{c,i}(t))^2 + (z + z_{c,i}(t))^2}{\sigma_v^2}\Bigr)
 $$  
-</div>
 
 where $(x,y,z)$ are the evaluation point, $(x_{c,i},y_{c,i},z_{c,i})$ is the puff center, $\sigma_h,\sigma_v$ are the time‑varying spreads, and $Q_{p,i}$ is the puff’s mass. Summing over all $N$ puffs gives the full plume:
 
@@ -51,16 +49,19 @@ Each puff’s state vector
 $$
 \mathbf{x}_k = [\,x_c,\,y_c,\,z_c,\,\sigma_h,\,\sigma_v\,]^T
 $$  
+<br>
+
 evolves via  
+
+<br>
+
 $$
 \mathbf{x}_{k+1} = f(\mathbf{x}_k) + \mathbf{w}_k,\quad
 \mathbf{y}_k = g(\mathbf{x}_k) + \mathbf{v}_k\,.
 $$  
 The EKF alternates between:
 
-<div align="center">
-
-**Predict**  
+**Predict** 
 $$
 \hat{\mathbf{x}}_{k+1\mid k} = f(\hat{\mathbf{x}}_{k\mid k}), 
 \quad
@@ -73,8 +74,6 @@ K_{k+1} = P_{k+1\mid k}\,G_{k+1}^T\,(G_{k+1}\,P_{k+1\mid k}\,G_{k+1}^T + R)^{-1}
 \quad
 \hat{\mathbf{x}}_{k+1\mid k+1} = \hat{\mathbf{x}}_{k+1\mid k} + K_{k+1}\bigl(\mathbf{y}_{k+1} - g(\hat{\mathbf{x}}_{k+1\mid k})\bigr)
 $$
-
-</div>
 
 where $F_k$ and $G_{k+1}$ are the Jacobians of $f$ and $g$, and $Q,R$ the noise covariances.
 
