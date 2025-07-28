@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "TurtleBot3 Pathfinder: Built from the Ground Up"
-date: 2025-03-20
+title: "TurtleBot3 Pathfinder"
+date: 2023-05-25
 subtitle: "Intelligent Navigation using a TurtleBot3, all built basically from scratch"
 ---
 
