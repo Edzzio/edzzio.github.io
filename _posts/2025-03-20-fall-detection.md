@@ -29,7 +29,7 @@ subtitle: "AI based fall detection on constrained environment"
 <h2>Method</h2>
 <p>
   <figure style="max-width:800px; margin:0 auto; text-align:center;">
-  <img src="../assets/img/poster_metodo.drawio.png" width="800" alt="Method workflow diagram">
+  <img src="../assets/img/poster_metodo.png" width="800" alt="Method workflow diagram">
   <figcaption><em>Figure 1.</em> Overview of the signal‑processing and TinyML pipeline.</figcaption>
 </figure>
 </p>
@@ -53,7 +53,7 @@ subtitle: "AI based fall detection on constrained environment"
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
   <img src="../assets/img/ai_results.png" width="400" alt="AI results">
   <figcaption><em>Figure 2.</em> Random Forest with and without our optimization workflow.</figcaption>
-
+</figure>
 </p>
 
 <h2>What’s Next?</h2>
