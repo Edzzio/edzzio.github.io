@@ -17,7 +17,7 @@ When I'm not optimizing AIs, I enjoy racquet sports, especially table tennis, as
 
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
   <img src="assets/img/kayaKING.jpg" width="500" alt="Method workflow diagram">
-  <figcaption><em>Figure 1.</em> The king of the rivers</figcaption>
+  <figcaption><em>The king of the rivers</em></figcaption>
 </figure>
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">

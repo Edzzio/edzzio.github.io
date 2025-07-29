@@ -37,7 +37,7 @@ subtitle: "AI based fall detection on constrained environment"
   In a set of reproducible tests (ten falls per scenario), the system detected all simulated falls—whether low‑height or staircase‑style—without any false positives during normal activities. Memory usage peaked at just 60 % of the 320 KB RAM, and the badge’s IMU ran continuously in Ultra‑Low Power mode (~20 μA) at 104 Hz sampling.
 
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
-  <img src="../assets/img/ai_results.png" width="400" alt="AI results">
+  <img src="../assets/img/ai_results.png" width="600" alt="AI results">
   <figcaption><em>Figure 2.</em> Random Forest with and without our optimization workflow.</figcaption>
 </figure>
 </p>
