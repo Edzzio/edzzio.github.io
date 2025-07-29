@@ -136,21 +136,24 @@ navbar-var-length: false
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-page-col: "#3B82F6"
-text-col: "#404040"
-link-col: "#008AFF"
-hover-col: "#0085A1"
+# Page background
+page-col:        "#DBEAFE"   # blue‑100
 
-# 🔶 Navbar (yellow)
-navbar-col: "#1E3A8A"           
-navbar-text-col: "#000000"      # Black text for contrast
-navbar-border-col: "#CCCC00"    # Optional: darker yellow border
+# Main text & links
+text-col:        "#1F2937"   # gray‑800 for strong contrast
+link-col:        "#2563EB"   # blue‑600 for clear link visibility
+hover-col:       "#1E40AF"   # blue‑800 on hover
 
-# 🔸 Footer 
-footer-col: "#BFDBFE"           
-footer-text-col: "#FFFFFF"      # White text
-footer-link-col: "#FFFFFF"
-footer-hover-col: "#FFFFCC"     # Light yellow on hover (optional)
+# 🔶 Navbar (light blue)
+navbar-col:      "#BFDBFE"   # blue‑200
+navbar-text-col: "#1F2937"   # gray‑800 (better than pure black on pastel)
+navbar-border-col:"#93C5FD"  # blue‑300 for a subtle bottom border
+
+# 🔸 Footer (very pale blue)
+footer-col:      "#EFF6FF"   # blue‑50
+footer-text-col: "#1F2937"   # gray‑800
+footer-link-col: "#2563EB"   # same as link‑col (blue‑600)
+footer-hover-col:"#C7E6FF"   # blue‑100 on hover   # Light yellow on hover (optional)
 
 #navbar-img: "/assets/img/bgimage.png"
 #footer-img: "/assets/img/bgimage.png"
