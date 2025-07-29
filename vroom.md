@@ -1,7 +1,6 @@
 ---
 layout: page
 title: My love of the automotive industry
-subtitle: Coming soon to a place near you !
 ---
 
 A totally **NON-BIASED** tierlist of "affordable" car brand is spotted here below. 
