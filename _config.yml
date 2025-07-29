@@ -136,24 +136,25 @@ navbar-var-length: false
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-# Page background
-page-col:        "#DBEAFE"   # blue‑100
+# Page background → ultra‑light blue
+page-col:        "#F3F9FF"   # a barely‑there blue tint
 
 # Main text & links
-text-col:        "#1F2937"   # gray‑800 for strong contrast
-link-col:        "#2563EB"   # blue‑600 for clear link visibility
-hover-col:       "#1E40AF"   # blue‑800 on hover
+text-col:        "#1F2937"   # dark gray (≈Tailwind gray‑800)
+link-col:        "#1D4ED8"   # strong blue (≈Tailwind blue‑700)
+hover-col:       "#1E40AF"   # deeper blue (≈Tailwind blue‑800)
 
-# 🔶 Navbar (light blue)
-navbar-col:      "#BFDBFE"   # blue‑200
-navbar-text-col: "#1F2937"   # gray‑800 (better than pure black on pastel)
-navbar-border-col:"#93C5FD"  # blue‑300 for a subtle bottom border
+# 🔶 Navbar (very pale blue)
+navbar-col:      "#ECF5FF"   # almost white with blue hint
+navbar-text-col: "#1F2937"   # same dark gray for readability
+navbar-border-col:"#93C5FD"  # soft blue‑300 border
 
-# 🔸 Footer (very pale blue)
-footer-col:      "#EFF6FF"   # blue‑50
-footer-text-col: "#1F2937"   # gray‑800
-footer-link-col: "#2563EB"   # same as link‑col (blue‑600)
-footer-hover-col:"#C7E6FF"   # blue‑100 on hover   # Light yellow on hover (optional)
+# 🔸 Footer (virtually white)
+footer-col:      "#FCFEFF"   # nearly pure white with a whisper of blue
+footer-text-col: "#1F2937"   # dark gray
+footer-link-col: "#1D4ED8"   # matching main link color
+footer-hover-col:"#DBEAFE"   # very light blue‑100 on hover
+
 
 #navbar-img: "/assets/img/bgimage.png"
 #footer-img: "/assets/img/bgimage.png"
