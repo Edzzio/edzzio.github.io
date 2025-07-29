@@ -147,13 +147,13 @@ hover-col:       "#1E40AF"   # deeper blue (≈Tailwind blue‑800)
 # 🔶 Navbar (very pale blue)
 navbar-col:      "#ECF5FF"   # almost white with blue hint
 navbar-text-col: "#1F2937"   # same dark gray for readability
-navbar-border-col:"#93C5FD"  # soft blue‑300 border
+navbar-border-col: "#93C5FD"  # soft blue‑300 border
 
 # 🔸 Footer (virtually white)
 footer-col:      "#FCFEFF"   # nearly pure white with a whisper of blue
 footer-text-col: "#1F2937"   # dark gray
 footer-link-col: "#1D4ED8"   # matching main link color
-footer-hover-col:"#DBEAFE"   # very light blue‑100 on hover
+footer-hover-col: "#DBEAFE"   # very light blue‑100 on hover
 
 
 #navbar-img: "/assets/img/bgimage.png"
