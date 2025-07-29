@@ -22,8 +22,8 @@ mathjax: true
   <figcaption><em>Figure 1.</em> Overview of the signal‑processing and TinyML pipeline.</figcaption>
   </figure>  
 
-  A bit more detail on the multiobjective Bayesian optimization : I chose to optimize 3 cost functions at the same time (balanced accuracy, model complexity, model RAM usage), and then choose the optimal model hyperparameters with a simple, non-automated Pareto front analysis. In the second figure here below, you will find a basic example using the Random Forest model's number of trees $(n_{estimators})$ which directly impacts the model's RAM usage, against the balanced accuracy (which normally increases as we increase the number of trees).
-
+  A bit more detail on the multiobjective Bayesian optimization : I chose to optimize 3 cost functions at the same time (balanced accuracy, model complexity, model RAM usage), and then choose the optimal model hyperparameters with a simple, non-automated Pareto front analysis. In the second figure here below, you will find a basic example using the Random Forest model's number of trees which directly impacts the model's RAM usage, against the balanced accuracy (which normally increases as we increase the number of trees).
+<br>
   <figure style="max-width:800px; margin:0 auto; text-align:center;">
   <img src="../assets/img/pareto.png" width="400" alt="AI results">
   <figcaption><em>Figure 2.</em> Basic Pareto front analysis.</figcaption>
@@ -34,14 +34,14 @@ mathjax: true
 <h2>Implementation</h2>
 <p>
   The chosen model was exported to C via X‑Cube‑AI and integrated into STM32CubeIDE. In order to reduce the power consumption, and not continuously use the AI model (and thus its feature extraction as well), I also had the chance to implement a freefall hardware interruption : if a certain amount of time has passed under a threshold, a freefall IRQ will occur (Fig. 3).
-
+  <br>
   <figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
   <img src="../assets/img/freefall.png" width="400" alt="AI results">
   <figcaption><em>Figure 3.</em> Freefall hardware IRQ.</figcaption>
   </figure>
 
   In essence, a free‑fall interrupt triggers capture of pre‑ and post‑fall data into a circular buffer, upon which the embedded feature‑extraction routines and normalized inference run in under 0.04 ms. Detected falls light up an SOS LED on the device for immediate alert (Fig. 4).  
-
+  <br>
   <figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
   <img src="../assets/img/alarm_idetime.png" width="150" alt="AI results">
   <figcaption><em>Figure 4.</em> iDETime SOS LED in red.</figcaption>
