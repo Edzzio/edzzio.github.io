@@ -40,8 +40,7 @@ mathjax: true
   <figcaption><em>Figure 3.</em> Freefall hardware IRQ.</figcaption>
   </figure>
 
-  In essence, a free‑fall interrupt triggers capture of pre‑ and post‑fall data into a circular buffer, upon which the embedded feature‑extraction routines and normalized inference run in under 0.04 ms. Detected falls light up an SOS LED on the device for immediate alert (Fig. 4).    
-  <br>
+  In essence, a free‑fall interrupt triggers capture of pre‑ and post‑fall data into a circular buffer, upon which the embedded feature‑extraction routines and normalized inference run in under 0.04 ms. Detected falls light up an SOS LED on the device for immediate alert (Fig. 4).  <br><br>
   <figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
   <img src="../assets/img/alarm_idetime.png" width="150" alt="AI results">
   <figcaption><em>Figure 4.</em> iDETime SOS LED in red.</figcaption>
