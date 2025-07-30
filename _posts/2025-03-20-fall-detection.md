@@ -23,7 +23,7 @@ mathjax: true
   </figure>  
 
   A bit more detail on the multiobjective Bayesian optimization : I chose to optimize 3 cost functions at the same time (balanced accuracy, model complexity, model RAM usage), and then choose the optimal model hyperparameters with a simple, non-automated Pareto front analysis. In the second figure here below, you will find a basic example using the Random Forest model's number of trees which directly impacts the model's RAM usage, against the balanced accuracy (which normally increases as we increase the number of trees).  
-<br>
+<br><br>
   <figure style="max-width:800px; margin:0 auto; text-align:center;">
   <img src="../assets/img/pareto.png" width="400" alt="AI results">
   <figcaption><em>Figure 2.</em> Basic Pareto front analysis.</figcaption>
