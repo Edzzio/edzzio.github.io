@@ -5,17 +5,13 @@ date: 2025-11-04
 subtitle: "AI based multi-keyword spotter on constrained environment"
 ---
 
-<p>
   This project began at the end of my internship and continued during my full-time position. It demonstrated the feasibility of a fully on-device multi-keyword spotter running on the STM32L4-based iDETime device. The system combined an optimized signal-processing pipeline for lightweight feature extraction with compact Tiny models, enabling real-time inference within a strict 320 KB RAM constraint. The results were promising; however, the training data revealed limitations in handling non-ideal French keyword scenarios.
-</p>
 
-<h2>Objectives</h2>
-<p>
+## Objectives
+
   The work began with a rather vague set of goals: to implement a multi-keyword spotter algorithm capable of detecting both an environment keyword (e.g., car, room, office) and a number keyword within a given audio sample. Since no specific requirements were provided, I took the initiative to define high-level specifications. My objectives were to design a robust and highly efficient signal-processing and feature extraction pipeline (a key bottleneck previously identified in fall detection tasks) and to develop a novel method for detecting multiple keyword types using an optimized Tiny Neural Network. Naturally, achieving high word accuracy and maintaining a low memory footprint were essential goals. The ultimate target was, of course, the implementation on the MCU of the iDETime device itself.
-</p>
 
-<h2>Method</h2>
-<p>
+## Method
 
   For the multi-keyword spotter, we had several options. The ones I considered were the following :  
   - A multi-head TinyCNN  
@@ -52,10 +48,8 @@ subtitle: "AI based multi-keyword spotter on constrained environment"
   - Use depthwise-separable convolutions.  
   - Perform MFCC parameter tuning with a scalarized multi-objective Bayesian Optimization (MOBO) to minimize overhead before inference (more details in the fall detection post).  
 
-</p>
+## Results (WIP)
 
-<h2>Results (WIP)</h2>
-<p>
   Each TinyCNN model achieved very high accuracy and used the exact same topology, indicating effective feature extraction and a well-designed TinyCNN architecture, as shown in the table below :
 
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
@@ -65,9 +59,6 @@ subtitle: "AI based multi-keyword spotter on constrained environment"
 
 When implementing the multi-keyword spotter on phone-recorded audio samples and concatenated AI-generated samples, the method performed flawlessly so far. However, I have not yet had the opportunity to implement it on the MCU itself. Unfortunately, given the current situation of the company (with a high risk of liquidation), it is unlikely that I will be able to complete the implementation.
 
-</p>
+## What’s Next ?
 
-<h2>What’s Next?</h2>
-<p>
   Although the model topology appears satisfactory at first glance, I prefer to avoid manual fine-tuning. Therefore, applying a Neural Architecture Search (NAS), specifically a hardware-aware NAS such as Hardware-DARTS or Proxy-NAS, could be a promising next step. Ideally, the implementation should also be completed and tested with a diverse group of users to evaluate its real-world viability, as well as profiled on the MCU to analyze its memory consumption and performance efficiency.
-</p>

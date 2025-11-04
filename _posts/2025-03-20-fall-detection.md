@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 <p>
-  This internship project demonstrated the feasibility of fully on‑device fall detection on the STM32L4‑based iDETime device, combining a tailor‑made signal‑processing pipeline, lightweight feature extraction, and real‑time inference of a TinyML model under a strict 320 KB RAM budget.
+  This internship project demonstrated the feasibility of fully on‑device fall detection on the STM32L4‑based iDETime badge, combining a tailor‑made signal‑processing pipeline, lightweight feature extraction, and real‑time inference of a TinyML model under a strict 320 KB RAM budget.
 </p>
 
 <h2>Objectives</h2>
