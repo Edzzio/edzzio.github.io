@@ -39,7 +39,7 @@ subtitle: "AI based multi-keyword spotter on constrained environment"
   Below is the pipeline for a single model (identical for both) : 
 
   <figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
-  <img src="../assets/img/simple-KWS-method.png" width="800" alt="Method workflow diagram">
+  <img src="../assets/img/simple-KWS-method.png" width="400" alt="Method workflow diagram">
   <figcaption><em>Figure 2.</em> Generic Keyword spotting workflow.</figcaption>
   </figure>  
 
@@ -53,7 +53,7 @@ subtitle: "AI based multi-keyword spotter on constrained environment"
   Each TinyCNN model achieved very high accuracy and used the exact same topology, indicating effective feature extraction and a well-designed TinyCNN architecture, as shown in the table below :
 
 <figure style="max-width:800px; margin:0 auto; text-align:center;">
-  <img src="../assets/img/results_vad_kws.png" width="400" alt="AI results">
+  <img src="../assets/img/results_vad_kws.png" width="500" alt="AI results">
   <figcaption><em>Figure 3.</em> TinyCNN optimization results.</figcaption>
 </figure>
 
