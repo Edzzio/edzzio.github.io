@@ -39,7 +39,7 @@ subtitle: "AI based multi-keyword spotter on constrained environment"
   Below is the pipeline for a single model (identical for both) : 
 
   <figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
-  <img src="../assets/img/simple-KWS-method.png" width="400" alt="Method workflow diagram">
+  <img src="../assets/img/simple-KWS-method.png" width="500" alt="Method workflow diagram">
   <figcaption><em>Figure 2.</em> Generic Keyword spotting workflow.</figcaption>
   </figure>  
 
