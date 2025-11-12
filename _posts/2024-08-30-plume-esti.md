@@ -57,9 +57,9 @@ C_i(x, y, z, t) =
 $$
 </p>
 
-<p><strong>where:</strong></p>
+<p>where:</p>
 
-<div style="margin-left: 2em; line-height: 1.4;">
+<div style="margin-left: 0em; line-height: 1.4;">
   <span><b>\( (x, y, z) \)</b> — evaluation point</span><br>
   <span><b>\( (x_{c,i}, y_{c,i}, z_{c,i}) \)</b> — puff center</span><br>
   <span><b>\( \sigma_h, \sigma_v \)</b> — horizontal and vertical spreads (time-varying)</span><br>
@@ -124,8 +124,13 @@ $$
 </p>
 
 <p>
-where $$F_k$$ and $$G_{k+1}$$ are the Jacobians of $$f$$ and $$g$$, and $$Q,R$$ represent the process and measurement noise covariances, respectively.
+where:
 </p>
+
+<div style="margin-left: 0em; line-height: 1.4;">
+  <span><b>\( F_k \), \( G_{k+1} \)</b> — Jacobians of \( f \) and \( g \)</span><br>
+  <span><b>\( Q, R \)</b> — process and measurement noise covariance matrices, respectively</span>
+</div>
 
 <h2>Implementation</h2>
 
