@@ -37,23 +37,44 @@ The problem with modeling the smoke plume as a single steady-state entity (Gauss
 A more dynamic solution is to discretize the plume into individual puffs emitted at fixed intervals. Each puff’s concentration field is:
 </p>
 
-<p>
+<p style="text-align: center;">
 $$
-C_i(x,y,z,t)
-= \frac{Q_{p,i}}{(2\pi)^{3/2}\,\sigma_h^2\,\sigma_v}
-\exp\!\Bigl(-\tfrac12\frac{(x - x_{c,i}(t))^2 + (y - y_{c,i}(t))^2}{\sigma_h^2}\Bigr)
-\times
-\exp\!\Bigl(-\tfrac12\frac{(z - z_{c,i}(t))^2 + (z + z_{c,i}(t))^2}{\sigma_v^2}\Bigr)
+C_i(x, y, z, t) =
+\frac{Q_{p,i}}{(2\pi)^{3/2}\sigma_h^2\sigma_v}
+\exp\!\left[
+-\frac{1}{2}
+\left(
+\frac{(x - x_{c,i}(t))^2 + (y - y_{c,i}(t))^2}{\sigma_h^2}
+\right)
+\right]
+\,
+\exp\!\left[
+-\frac{1}{2}
+\left(
+\frac{(z - z_{c,i}(t))^2 + (z + z_{c,i}(t))^2}{\sigma_v^2}
+\right)
+\right]
 $$
 </p>
 
 <p>
-where $$(x,y,z)$$ are the evaluation point, $$(x_{c,i},y_{c,i},z_{c,i})$$ is the puff center, $$\sigma_h,\sigma_v$$ are the time-varying spreads, and $$Q_{p,i}$$ is the puff’s mass. Summing over all $$N$$ puffs gives the full plume:
+where:
 </p>
 
+<ul style="list-style-type: none; margin-left: 2em;">
+  <li><b>\( (x, y, z) \)</b> – evaluation point</li>
+  <li><b>\( (x_{c,i}, y_{c,i}, z_{c,i}) \)</b> – puff center</li>
+  <li><b>\( \sigma_h, \sigma_v \)</b> – horizontal and vertical spreads (time-varying)</li>
+  <li><b>\( Q_{p,i} \)</b> – mass of the puff</li>
+</ul>
+
 <p>
+Summing over all \( N \) puffs gives the full plume:
+</p>
+
+<p style="text-align: center;">
 $$
-C(x,y,z,t) = \sum_{i=1}^N C_i(x,y,z,t)\,.
+C(x, y, z, t) = \sum_{i=1}^{N} C_i(x, y, z, t)\,.
 $$
 </p>
 
