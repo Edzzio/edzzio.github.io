@@ -11,7 +11,7 @@ use-site-title: true
   <style>
     /* Add vertical spacing between paragraphs only inside this section */
     div p {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
   </style>
 
