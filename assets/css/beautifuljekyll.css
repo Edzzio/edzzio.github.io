@@ -1124,3 +1124,10 @@ pre {
     display: inline-block;
   }
 }
+
+/* --- Custom text justification --- */
+p, li, blockquote {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
