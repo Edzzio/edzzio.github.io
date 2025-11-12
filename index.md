@@ -6,6 +6,7 @@ use-site-title: true
 ---
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<div style="text-align: justify; text-justify: inter-word;">
 
 I completed my Master's degree in Mechatronics at the <a href="https://www.unistra.fr/">University of Strasbourg</a>, with a strong focus on embedded Artificial Intelligence at the edge (Edge AI) through hardware–software co-design.
 
@@ -25,5 +26,6 @@ When I’m not optimizing AIs, I enjoy racquet sports (especially table tennis),
   <figcaption><em>The king of the rivers</em></figcaption>
 </figure>
 
+</div>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
