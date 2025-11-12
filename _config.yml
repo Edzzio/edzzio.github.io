@@ -136,24 +136,24 @@ navbar-var-length: false
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-# Page background → ultra‑light green
-page-col:        "#ECFDF5"   # Tailwind green‑50
+# 🔴 Page background → ultra-light red
+page-col:        "#FEF2F2"   # Tailwind red-50
 
 # Main text & links
-text-col:        "#064E3B"   # Tailwind green‑900
-link-col:        "#10B981"   # Tailwind green‑500
-hover-col:       "#059669"   # Tailwind green‑600
+text-col:        "#7F1D1D"   # Tailwind red-900
+link-col:        "#EF4444"   # Tailwind red-500
+hover-col:       "#DC2626"   # Tailwind red-600
 
-# 🔶 Navbar (slightly deeper green)
-navbar-col:      "#D1FAE5"   # Tailwind green‑100
-navbar-text-col: "#064E3B"   # dark‑green text
-navbar-border-col: "#A7F3D0"  # Tailwind green‑200 border
+# 🔶 Navbar (slightly deeper red)
+navbar-col:      "#FEE2E2"   # Tailwind red-100
+navbar-text-col: "#7F1D1D"   # dark red text
+navbar-border-col: "#FECACA" # Tailwind red-200 border
 
-# 🔸 Footer (near‑white with a hint of green)
-footer-col:      "#F9FFFC"   # almost pure white
-footer-text-col: "#064E3B"   # dark‑green text
-footer-link-col: "#10B981"   # same as link‑col
-footer-hover-col: "#D1FAE5"   # green‑100 on hover
+# 🔸 Footer (near-white with a hint of red)
+footer-col:      "#FFF9F9"   # almost pure white
+footer-text-col: "#7F1D1D"   # dark red text
+footer-link-col: "#EF4444"   # same as link-col
+footer-hover-col: "#FEE2E2"  # red-100 on hover
 
 
 
