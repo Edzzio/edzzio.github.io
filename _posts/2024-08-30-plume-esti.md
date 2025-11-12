@@ -127,7 +127,7 @@ $$
 where:
 </p>
 
-<div style="margin-left: 0em; line-height: 1.4;">
+<div style="margin-left: 0em; line-height: 1.4; margin-bottom: 1.5em;">
   <span><b>\( F_k \), \( G_{k+1} \)</b> — Jacobians of \( f \) and \( g \)</span><br>
   <span><b>\( Q, R \)</b> — process and measurement noise covariance matrices, respectively</span>
 </div>

@@ -44,26 +44,8 @@ A two-stage approach was implemented (<em>Fig. 2</em> for global method):
 </figure>
 
 <p>
-<strong>Segmentation-guided anomaly mapping:</strong> This augments the autoencoder with a lightweight segmentation head that produces per-patch error scores strictly over the object region. We first select the top 10 % of patches with the highest reconstruction error (<em>Fig. 4</em>). For each candidate patch, we then compute the difference between its error and the errors of its immediate neighbors (<em>Fig. 5</em>). 
-
-<p>
-A patch is marked as anomalous whenever this error deviation exceeds:
+<strong>Segmentation-guided anomaly mapping:</strong> This augments the autoencoder with a lightweight segmentation head that produces per-patch error scores strictly over the object region. We first select the top 10 % of patches with the highest reconstruction error (<em>Fig. 4</em>). For each candidate patch, we then compute the difference between its error and the errors of its immediate neighbors (<em>Fig. 5</em>). A patch is marked as anomalous whenever this error deviation exceeds <b>\( \pm 3\sigma \)</b>, where <b>\( \sigma \)</b> is the standard deviation of the reconstruction error measured on the defect-free training set.
 </p>
-
-<p style="text-align: center;">
-$$
-\pm 3\sigma
-$$
-</p>
-
-<p>
-where:
-</p>
-
-<div style="margin-left: 0em; line-height: 1.4;">
-  <span><b>\( \sigma \)</b> — standard deviation of the reconstruction error measured on the defect-free training set</span>
-</div>
-
 
 <figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
   <img src="../assets/img/area_of_interest_ano.png" width="500" alt="Area of interest errors">
