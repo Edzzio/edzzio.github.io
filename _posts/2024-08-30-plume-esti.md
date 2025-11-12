@@ -57,16 +57,14 @@ C_i(x, y, z, t) =
 $$
 </p>
 
-<p>
-where:
-</p>
+<p><strong>where:</strong></p>
 
-<ul style="list-style-type: none; margin-left: 2em;">
-  <li><b>\( (x, y, z) \)</b> – evaluation point</li>
-  <li><b>\( (x_{c,i}, y_{c,i}, z_{c,i}) \)</b> – puff center</li>
-  <li><b>\( \sigma_h, \sigma_v \)</b> – horizontal and vertical spreads (time-varying)</li>
-  <li><b>\( Q_{p,i} \)</b> – mass of the puff</li>
-</ul>
+<div style="margin-left: 2em; line-height: 1.4;">
+  <span><b>\( (x, y, z) \)</b> — evaluation point</span><br>
+  <span><b>\( (x_{c,i}, y_{c,i}, z_{c,i}) \)</b> — puff center</span><br>
+  <span><b>\( \sigma_h, \sigma_v \)</b> — horizontal and vertical spreads (time-varying)</span><br>
+  <span><b>\( Q_{p,i} \)</b> — mass of the puff</span>
+</div>
 
 <p>
 Summing over all \( N \) puffs gives the full plume:
