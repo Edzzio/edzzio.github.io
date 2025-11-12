@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact
-subtitle: Reach me at iDEMoov 
+subtitle: Reach me at iDEMoov (invalid starting December 1st)
 ---
 
 <a href="idemoov.fr">**iDEMoov**</a>  - 1C Rue Pégase, 67960 Entzheim  
