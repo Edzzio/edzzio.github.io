@@ -141,7 +141,7 @@ All steps—from puff generation to EKF recursion—are implemented in a single 
 <h2>Results</h2>
 
 <p>
-The 3D plume evolution is visualized with successive slice plots (<em>Fig. 2</em>). The EKF-estimated horizontal spread $$\sigma_h$$ tracks the true value closely (<em>Fig. 3</em>), achieving RMSE < 5 %. Estimated concentration curves align with noisy sensor data, reducing bias while keeping each EKF update under 1 ms. The Live Script efficiently processes hundreds of puffs and updates in just a few seconds.
+The 3D plume evolution is visualized with successive slice plots (<em>Fig.&nbsp;2</em>). The EKF-estimated horizontal spread \( \sigma_h \) tracks the true value closely (<em>Fig.&nbsp;3</em>), achieving RMSE &lt; 5&nbsp;%. Estimated concentration curves align with noisy sensor data, reducing bias while keeping each EKF update under 1&nbsp;ms. The Live Script efficiently processes hundreds of puffs and updates in just a few seconds.
 </p>
 
 <figure style="max-width:800px; margin:0 auto 1.5em; text-align:center;">
